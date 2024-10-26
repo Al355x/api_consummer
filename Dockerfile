@@ -3,6 +3,7 @@ FROM node:23-alpine
 COPY ./app ./app
 WORKDIR /app
 
-CMD ["./sh/entrypoint.sh"]
+RUN npm install openai
+RUN chmod +x sh/entrypoint.sh
 
-EXPOSE 3000
+CMD ["sh", "sh/entrypoint.sh"]
