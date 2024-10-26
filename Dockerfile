@@ -3,6 +3,6 @@ FROM node:23-alpine
 COPY ./app ./app
 WORKDIR /app
 
-CMD [ "node", "helloWorld.js" ]
+CMD ["./sh/entrypoint.sh"]
 
 EXPOSE 3000
