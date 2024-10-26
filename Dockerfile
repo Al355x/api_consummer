@@ -1,7 +1,5 @@
 FROM node:23-alpine
 
-ENV OPENAI_API_KEY="test"
-
 COPY ./app ./app
 WORKDIR /app
 
